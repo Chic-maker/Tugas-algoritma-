@@ -1,0 +1,44 @@
+def hitung_usaha(F,s):
+    W = F * s
+    return W
+
+
+def hitung_Gaya(W,s):
+    F = W / s
+    return F
+
+def hitung_perpindahan(W,F):
+    s = W/F
+    return s
+
+def main():
+    print("program untuk menghitung Usaha")
+    print("1. Hitung Usaha (W)")
+    print("2. Hitung Gaya (F)")
+    print("3. Hitung perpindahan (s)")
+
+    pilihan = input("Masukkan pilihan 1/2/3/4:")
+
+    if pilihan == "1":
+       F = float(input("Masukkan nilai Gaya dalam N:"))
+       s = float(input("Masukkan nilai perpindahan dalam m:"))
+       W = hitung_usaha(F,s)
+       print(f"Nilai usaha : {W: .2f} J")
+
+    elif pilihan == "2":
+       W = float(input("Masukkan nilai usaha J:"))
+       s = float(input("Masukkan nilai perpindahan dalam m:"))
+       F = hitung_Gaya(W,s)
+       print(f"Nilai usaha sebesar: {F: .2f} N")  
+
+    elif pilihan == "3":
+       F = float(input("Masukkan nilai gaya dalam N:"))
+       W = float(input("Masukkan nilai usaha dalam J:"))
+       s = hitung_perpindahan(F,W)
+       print(f"perpindahannya sebesar: {s: .2f} m")
+   
+    else:
+        print("Pilihan tidak sesuai, silakan pilih 1/2/3")
+
+if __name__ == "__main__":
+    main()
